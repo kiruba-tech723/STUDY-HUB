@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyHub - Student Campus Portal</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-bar">
+      <a href="index.html" class="brand">📚 StudyHub</a>
+      <ul class="nav-links" data-drawer>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#outline">Outline</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="home.html">Dashboard</a></li>
+      </ul>
+      <div>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to StudyHub</h1>
+    <p>One place for your timetable, notices, deadlines and GPA calculation.</p>
+    <a href="register.html" class="btn">Get Started</a>
+    <a href="signin.html" class="btn btn-outline">Sign In</a>
+  </section>
+
+  <section class="section" id="features">
+    <h2>Features</h2>
+    <div class="card-grid">
+      <div class="card"><h3>📅 Timetable</h3><p>See your daily classes and labs at a glance.</p></div>
+      <div class="card"><h3>📢 Notices</h3><p>Never miss an announcement from your department.</p></div>
+      <div class="card"><h3>⏰ Deadlines</h3><p>Track assignments, IA exams and project submissions.</p></div>
+      <div class="card"><h3>🧮 GPA Calculator</h3><p>Calculate your GPA from credits and grades.</p></div>
+      <div class="card"><h3>🤖 Chat Assistant</h3><p>Ask about exam dates, library timing and registration.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="outline">
+    <h2>Site Outline</h2>
+    <div class="card">
+      <ul>
+        <li><a href="index.html">Landing page</a> - overview of the portal</li>
+        <li><a href="register.html">Register</a> - detailed form with live validation</li>
+        <li><a href="signup.html">Sign Up</a> - quick account creation</li>
+        <li><a href="signin.html">Sign In</a> - login with show/hide password</li>
+        <li><a href="home.html">Home Dashboard</a> - timetable, notices, deadlines and calculators</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">StudyHub &copy; 2026 | 25CS208 Web Technology Micro Project</footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>
