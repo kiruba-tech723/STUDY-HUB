@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - StudyHub</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-bar">
+      <a href="index.html" class="brand">📚 StudyHub</a>
+      <ul class="nav-links" data-drawer>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="signin.html">Sign Out</a></li>
+      </ul>
+      <div>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="dashboard">
+    <!-- Left column: menu (250px on desktop, hamburger drawer on mobile) -->
+    <aside class="sidebar card" data-drawer>
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="#timetable" class="active">Timetable</a></li>
+        <li><a href="#notices">Notices</a></li>
+        <li><a href="#gpa">GPA Calculator</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#deadlines">Deadlines</a></li>
+      </ul>
+    </aside>
+
+    <!-- Centre column: main feed -->
+    <main class="feed">
+      <div class="card" id="timetable">
+        <h3>Today's Timetable</h3>
+        <table class="timetable">
+          <tr><th>Time</th><th>Subject</th><th>Room</th></tr>
+          <tr><td>9:00 - 10:00</td><td>Web Technology</td><td>A-101</td></tr>
+          <tr><td>10:00 - 11:00</td><td>Digital System Design</td><td>A-103</td></tr>
+          <tr><td>11:15 - 12:15</td><td>C Programming Lab</td><td>Lab 2</td></tr>
+          <tr><td>2:00 - 3:00</td><td>English Communication</td><td>B-205</td></tr>
+        </table>
+      </div>
+
+      <div class="card" id="notices">
+        <h3>Announcements</h3>
+        <ul class="notice-list">
+          <li><span class="tag">Exam</span> IA-3 timetable has been published.</li>
+          <li><span class="tag">Library</span> New books added to the CSE section.</li>
+          <li><span class="tag">Event</span> Hackathon registration closes this Friday.</li>
+        </ul>
+      </div>
+
+      <div class="card" id="gpa">
+        <h3>GPA Calculator</h3>
+        <div class="gpa-row">
+          <input type="number" class="credit" min="1" max="6" placeholder="Credits">
+          <select class="grade">
+            <option value="">Grade</option>
+            <option value="10">O (10)</option><option value="9">A+ (9)</option>
+            <option value="8">A (8)</option><option value="7">B+ (7)</option>
+            <option value="6">B (6)</option><option value="5">C (5)</option>
+          </select>
+        </div>
+        <div class="gpa-row">
+          <input type="number" class="credit" min="1" max="6" placeholder="Credits">
+          <select class="grade">
+            <option value="">Grade</option>
+            <option value="10">O (10)</option><option value="9">A+ (9)</option>
+            <option value="8">A (8)</option><option value="7">B+ (7)</option>
+            <option value="6">B (6)</option><option value="5">C (5)</option>
+          </select>
+        </div>
+        <div class="gpa-row">
+          <input type="number" class="credit" min="1" max="6" placeholder="Credits">
+          <select class="grade">
+            <option value="">Grade</option>
+            <option value="10">O (10)</option><option value="9">A+ (9)</option>
+            <option value="8">A (8)</option><option value="7">B+ (7)</option>
+            <option value="6">B (6)</option><option value="5">C (5)</option>
+          </select>
+        </div>
+        <button class="btn" id="gpaBtn">Calculate GPA</button>
+        <p id="gpaResult" style="margin-top:10px;font-weight:600"></p>
+      </div>
+    </main>
+
+    <!-- Right column: deadlines + calculator (300px on desktop) -->
+    <aside class="rightbar">
+      <div class="card" id="deadlines">
+        <h3>Upcoming Deadlines</h3>
+        <ul class="deadline-list">
+          <li><strong>Web Tech Micro Project</strong><br>Submit report + Vercel link</li>
+          <li><strong>DSD Micro Project</strong><br>Report submission</li>
+          <li><strong>Podcast Presentation</strong><br>Group project</li>
+        </ul>
+      </div>
+
+      <div class="card" id="calculator">
+        <h3>Calculator</h3>
+        <div class="calc">
+          <div class="calc-screen" id="calcScreen">0</div>
+          <div class="calc-keys">
+            <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button><button class="op" data-key="/">/</button>
+            <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button><button class="op" data-key="*">*</button>
+            <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button><button class="op" data-key="-">-</button>
+            <button data-key="0">0</button><button data-key=".">.</button><button class="clear" data-key="C">C</button><button class="op" data-key="+">+</button>
+            <button class="op" data-key="=" style="grid-column: span 4">=</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>
