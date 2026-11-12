@@ -1,0 +1,68 @@
+/* ===== layout.css : responsive layouts ===== */
+
+/* Feature cards on landing page */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+
+/* Hamburger button is hidden on desktop */
+.hamburger { display: none; }
+
+/* ----- Dashboard: MOBILE first (< 768px) : single column with Flexbox ----- */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  max-width: 1400px;
+  margin: auto;
+}
+.dashboard .sidebar { display: none; }            /* hidden until hamburger is tapped */
+.dashboard .sidebar.open { display: block; }
+.sidebar ul { list-style: none; }
+.sidebar li a { display: block; padding: 10px 12px; border-radius: 8px; color: var(--text); }
+.sidebar li a:hover, .sidebar li a.active { background: var(--primary); color: #fff; text-decoration: none; }
+.feed > .card, .rightbar > .card { margin-bottom: 16px; }
+
+.timetable { width: 100%; border-collapse: collapse; }
+.timetable th, .timetable td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+.timetable th { background: var(--bg); }
+
+.notice-list, .deadline-list { list-style: none; }
+.notice-list li, .deadline-list li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.notice-list li:last-child, .deadline-list li:last-child { border-bottom: none; }
+.tag { display: inline-block; font-size: 0.75rem; background: var(--primary); color: #fff; padding: 1px 8px; border-radius: 10px; margin-right: 6px; }
+
+/* GPA calculator inputs */
+.gpa-row { display: flex; gap: 8px; margin-bottom: 8px; }
+.gpa-row input, .gpa-row select {
+  flex: 1; min-width: 0; padding: 8px; border: 1px solid var(--border);
+  border-radius: 6px; background: var(--bg); color: var(--text);
+}
+
+/* Small screens: nav links collapse into the hamburger drawer */
+@media (max-width: 767px) {
+  .hamburger { display: block; }
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--card);
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero h1 { font-size: 2rem; }
+}
+
+/* ----- Dashboard: DESKTOP (>= 768px) : 3-column CSS Grid ----- */
+@media (min-width: 768px) {
+  .dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    align-items: start;
+  }
+  .dashboard .sidebar { display: block; }
+  .hamburger { display: none; }
+}
