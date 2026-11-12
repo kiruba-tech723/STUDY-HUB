@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - StudyHub</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-bar">
+      <a href="index.html" class="brand">📚 StudyHub</a>
+      <ul class="nav-links" data-drawer>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+      </ul>
+      <div>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="form-wrap">
+    <div class="card">
+      <h1>Create Account</h1>
+      <div class="success-banner" id="successMsg">Account created! Redirecting to Sign In...</div>
+
+      <form data-validate novalidate>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" data-check placeholder="name@example.com">
+          <span class="error-msg"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Create Password</label>
+          <input type="password" id="password" data-check placeholder="Min 8 characters">
+          <span class="error-msg"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" data-check placeholder="Re-enter password">
+          <span class="error-msg"></span>
+        </div>
+
+        <div class="form-group">
+          <label><input type="checkbox" id="terms" data-check style="width:auto"> I agree to the Terms of Service</label>
+          <span class="error-msg"></span>
+        </div>
+
+        <button type="submit" class="btn" disabled>Sign Up</button>
+      </form>
+      <p class="form-note">Already have an account? <a href="signin.html">Sign In</a></p>
+    </div>
+  </main>
+
+  <script src="js/theme.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>
